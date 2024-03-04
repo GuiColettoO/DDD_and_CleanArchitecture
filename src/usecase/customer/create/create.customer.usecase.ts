@@ -4,7 +4,7 @@ import Address from "../../../domain/customer/value-object/address";
 import { InputCreateCustomerDto } from "./create.customer.dto";
 
 
-export default class CustomerCreateUseCase {
+export default class CreateCustomerUseCase {
   private customerRepository: CustomerRepositoryInterface;
 
   constructor(customerRepository: CustomerRepositoryInterface) {

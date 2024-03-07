@@ -14,6 +14,8 @@ export default class CreateProductUseCase {
     const productId = uuid();
     const product = new Product(productId, input.name, input.price);
 
+    await this.productRepository.create(product);
+
     return {
       id: product.id,
       name: product.name,

@@ -14,7 +14,7 @@ const MockRepository = () => {
   }
 }
 
-describe("Init test create product use case", () => {
+describe("Unit test create product use case", () => {
 
   it("should create a product", async ()=> {
     const productRepository = MockRepository();
@@ -45,6 +45,6 @@ describe("Init test create product use case", () => {
     input.name = "John";
     input.price = -10;
 
-    await expect(productCreateUseCase.execute(input)).rejects.toThrow("Price must be greater than zero");
+    await expect(productCreateUseCase.execute(input)).rejects.toThrow("product: Price must be greater than 0");
   });
 });
